@@ -12,15 +12,15 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int horizpadbar        = 7;        /* horizontal padding for statusbar */
 static const int vertpadbar         = 7;        /* vertical padding for statusbar */
-static const char *fonts[]          = { "Firacode:weight=bold:size=14:antialias=true:hinting=true",
-                                  		"Hack:size=14:antialias=true:autohint=true",
-                                 		"JoyPixels:size=16:antialias=true:autohint=true"};
-static const char dmenufont[]       = "Firacode:weight=bold:size=14:antialias=true:hinting=true";
+static const char *fonts[]          = { "Firacode:weight=bold:size=10:antialias=true:hinting=true",
+                                  		"Hack:size=10:antialias=true:autohint=true",
+                                 		"JoyPixels:size=12:antialias=true:autohint=true"};
+static const char dmenufont[]       = "Firacode:weight=bold:size=10:antialias=true:hinting=true";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
-static const char col_cyan[]        = "#06802d";
+static const char col_cyan[]        = "#000080";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
@@ -73,8 +73,8 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "alacritty", NULL };
 static const char *micmute[] = { "/usr/bin/pactl", "set-mute", "0", "toggle", NULL };
-static const char *incvol[] = {"/usr/bin/amixer", "set", "Master", "5+", NULL};
-static const char *decvol[] = {"/usr/bin/amixer", "set", "Master", "5-", NULL};
+static const char *incvol[] = {"/usr/bin/amixer", "set", "Master", "5%+", NULL};
+static const char *decvol[] = {"/usr/bin/amixer", "set", "Master", "5%-", NULL};
 static const char *mutevol[] = { "usr/bin/amixer", "set", "Master", "toggle", NULL };
 static const char *brightnessUp[] = {"usr/bin/brightnessctl", "s", "+10%"};
 static const char *brightnessDown[] = {"usr/bin/brightnessctl", "s", "10%-"};

@@ -76,10 +76,10 @@ static const char *micmute[] = { "/usr/bin/pactl", "set-mute", "0", "toggle", NU
 static const char *incvol[] = {"/usr/bin/amixer", "set", "Master", "5%+", NULL};
 static const char *decvol[] = {"/usr/bin/amixer", "set", "Master", "5%-", NULL};
 static const char *mutevol[] = { "usr/bin/amixer", "set", "Master", "toggle", NULL };
-static const char *brightnessUp[] = {"usr/bin/brightnessctl", "s", "+10%"};
-static const char *brightnessDown[] = {"usr/bin/brightnessctl", "s", "10%-"};
-
-
+static const char *brightnessUp[] = {"brightnessctl", "set", "10%+"};
+static const char *brightnessDown[] = {"brightnessctl", "set", "10%-"};
+static const char *changeWallpaper[] = {"/home/tailsmonster/.scripts/random_wallpaper.sh", "NULL"};
+static const char *takeScreenshot[] = {"/home/tailsmonster/.scripts/screenshot_fullscreen_x11.sh", "NULL"};
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -127,6 +127,8 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ControlMask|ShiftMask, XK_m,      quit,           {0} },
 	{ MODKEY|ShiftMask,             XK_m,      quit,           {1} },
+	{ MODKEY|ControlMask,           XK_p,      spawn,       {.v = changeWallpaper} },
+	{ 0,                      0x0000ff61,    spawn,        {.v = takeScreenshot} },
 };
 
 /* button definitions */

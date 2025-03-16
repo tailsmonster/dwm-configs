@@ -8,6 +8,8 @@
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int gappx     = 6;        /* gaps between windows*/
 static const unsigned int snap      = 32;       /* snap pixel */
+#define ICONSIZE 16 				/* icon size */
+#define ICONSPACING 5 				/* space between icon and title */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int horizpadbar        = 8;        /* horizontal padding for statusbar */

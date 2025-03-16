@@ -4,7 +4,7 @@ static const Block blocks[] = {
 
 	{"", "~/.scripts/statusbar/memory.sh",	15,		0},
 
-	{"", "~/.scripts/statusbar/volume.sh", 5, 0 },
+	{"", "~/.scripts/statusbar/volume.sh", 1, 0 },
 	
 	{"", "~/.scripts/statusbar/internet.sh",	5,		0},
 	

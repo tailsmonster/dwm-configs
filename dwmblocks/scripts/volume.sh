@@ -7,11 +7,11 @@
 vol="$(awk -F"[][]" '/Left:/ { print $2 }' <(amixer sget Master) | tr -d '%')"
 
 if [ "$vol" -gt "70" ]; then
-     icon="🔊"
+     icon=" "
 elif [ "$vol" -lt "30" ]; then
-     icon="🔈"
+     icon=" "
 else
-     icon="🔉"
+     icon=" "
 fi
 
 echo "$icon$vol%"
